@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betynic: Roadmap Interactivo 30-60-90</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .phase-card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            padding: 1.5rem; /* 24px */
+        }
+        .phase-title {
+            color: #1e3a8a; /* Azul oscuro */
+        }
+        .section-title {
+            color: #1f2937; /* Gris oscuro */
+        }
+        .deliverable-item {
+            background-color: #f9fafb; /* Gris muy claro */
+            border-left: 4px solid #3b82f6; /* Borde azul */
+        }
+        .deliverable-completed {
+            border-left-color: #10b981; /* Borde verde */
+        }
+        .deliverable-completed .deliverable-text-label { /* Modificado para apuntar al label */
+            text-decoration: line-through;
+            color: #6b7280;
+        }
+        .notes-input {
+            border-color: #d1d5db;
+            transition: border-color 0.2s;
+        }
+        .notes-input:focus {
+            border-color: #3b82f6;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-800">Roadmap 30-60-90 Express para Betynic</h1>
+            <p class="text-xl text-gray-600 mt-2">Motor de Capital de Astrynn Holdings</p>
+            <p class="text-sm text-gray-500 mt-3">Marca tus entregables y añade notas para seguir tu progreso. ¡Tracción > Perfección!</p>
+        </header>
+
+        <div class="phase-card" id="phase-30">
+            <h2 class="phase-title text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-200">Horizonte: 30 Días</h2>
+            <div class="mb-6">
+                <h3 class="section-title text-xl font-semibold mb-2">🎯 Objetivo Macro:</h3>
+                <p class="text-gray-700 text-base">
+                    Comprender y ejecutar de forma consistente el ciclo completo de matched betting. Generar los primeros beneficios netos, demostrando la viabilidad de la estrategia. Establecer un sistema de seguimiento riguroso (Betynic Tracker).
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="section-title text-xl font-semibold mb-3">📄 Entregables Tangibles:</h3>
+                <div class="space-y-4">
+                    <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d30-e1-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d30-e1-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">"Betynic Tracker" completo y actualizado (con al menos 3-5 ciclos de ofertas finalizadas).</label>
+                        </div>
+                        <textarea id="d30-e1-notes" rows="2" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Notas / Link al Tracker..."></textarea>
+                    </div>
+                    <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d30-e2-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d30-e2-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">Capital inicial incrementado (demostrando beneficio neto).</label>
+                        </div>
+                        <input type="text" id="d30-e2-notes" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Beneficio Neto Obtenido (€)...">
+                    </div>
+                    <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d30-e3-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d30-e3-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">Listado personal de las 3-5 próximas casas de apuestas/ofertas a abordar.</label>
+                        </div>
+                        <textarea id="d30-e3-notes" rows="2" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Notas / Link al Listado..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="section-title text-xl font-semibold mb-2">🌟 Sensación Conseguida:</h3>
+                <p class="text-gray-700 text-base bg-green-50 p-3 rounded-md border border-green-200">
+                    "Entiendo cómo funciona esto y estoy generando mis primeros euros para Astrynn Holdings. El sistema de seguimiento está en marcha."
+                </p>
+            </div>
+        </div>
+
+        <div class="phase-card" id="phase-60">
+            <h2 class="phase-title text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-200">Horizonte: 60 Días</h2>
+            <div class="mb-6">
+                <h3 class="section-title text-xl font-semibold mb-2">🎯 Objetivo Macro:</h3>
+                <p class="text-gray-700 text-base">
+                    Haber completado un número significativo de ofertas de bienvenida (ej. 10-15). Duplicar o triplicar el capital inicial. Implementar consistentemente las reglas de gestión de capital y reinversión. Comenzar a investigar y probar ofertas de recarga.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="section-title text-xl font-semibold mb-3">📄 Entregables Tangibles:</h3>
+                <div class="space-y-4">
+                    <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d60-e1-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d60-e1-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">"Betynic Tracker" mostrando un crecimiento constante del capital y detalle de múltiples ofertas.</label>
+                        </div>
+                        <textarea id="d60-e1-notes" rows="2" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Notas / Revisión del Tracker..."></textarea>
+                    </div>
+                    <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d60-e2-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d60-e2-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">Primera transferencia (aunque sea pequeña) a la "Caja Astrynn" (si se duplicó capital).</label>
+                        </div>
+                        <input type="text" id="d60-e2-notes" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Monto Transferido (€) y Fecha...">
+                    </div>
+                    <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d60-e3-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d60-e3-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">Documento breve (1 pág) con estrategia para ofertas de recarga o arbitraje.</label>
+                        </div>
+                        <textarea id="d60-e3-notes" rows="2" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Notas / Link al Documento..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="section-title text-xl font-semibold mb-2">🌟 Sensación Conseguida:</h3>
+                <p class="text-gray-700 text-base bg-green-50 p-3 rounded-md border border-green-200">
+                    "Betynic está funcionando como un sistema, el capital está creciendo de forma medible y ya he realizado la primera contribución a la caja del Holding. Tengo un plan para seguir."
+                </p>
+            </div>
+        </div>
+
+        <div class="phase-card" id="phase-90">
+            <h2 class="phase-title text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-200">Horizonte: 90 Días</h2>
+            <div class="mb-6">
+                <h3 class="section-title text-xl font-semibold mb-2">🎯 Objetivo Macro:</h3>
+                <p class="text-gray-700 text-base">
+                    Alcanzar o superar el objetivo de capital (ej. ≥ 600€). Tener un flujo de operaciones constante. Haber realizado múltiples transferencias a "Caja Astrynn". Evaluar la transición o adición de otras estrategias de bajo riesgo.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="section-title text-xl font-semibold mb-3">📄 Entregables Tangibles:</h3>
+                <div class="space-y-4">
+                     <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d90-e1-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d90-e1-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">Informe de rendimiento de Betynic (90 días: ROI, capital final, transferencias, horas dedicadas).</label>
+                        </div>
+                        <textarea id="d90-e1-notes" rows="2" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Notas / Link al Informe..."></textarea>
+                    </div>
+                    <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d90-e2-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d90-e2-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">Plan de acción para Betynic (siguientes 90 días, incl. posible 2ª estrategia).</label>
+                        </div>
+                        <textarea id="d90-e2-notes" rows="2" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Notas / Link al Plan..."></textarea>
+                    </div>
+                    <div class="deliverable-item p-4 rounded-lg shadow">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="d90-e3-check" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer flex-shrink-0">
+                            <label for="d90-e3-check" class="deliverable-text-label text-gray-800 font-medium flex-grow cursor-pointer">"Caja Astrynn" con un saldo inicial tangible proveniente de Betynic.</label>
+                        </div>
+                        <input type="text" id="d90-e3-notes" class="notes-input mt-2 shadow-sm block w-full text-sm border-gray-300 rounded-md p-2" placeholder="Saldo en Caja Astrynn (€)...">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="section-title text-xl font-semibold mb-2">🌟 Sensación Conseguida:</h3>
+                <p class="text-gray-700 text-base bg-green-50 p-3 rounded-md border border-green-200">
+                    "Betynic es un motor de capital real y predecible para Astrynn Holdings. He alcanzado (o estoy cerca de) mi primer gran hito de capitalización y estoy financiando activamente los siguientes pasos del Holding. Domino el proceso."
+                </p>
+            </div>
+        </div>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-300">
+            <p class="text-sm text-gray-600">Este roadmap es tu guía. Ajústalo según sea necesario y celebra cada avance.</p>
+            <p class="text-sm text-gray-500 mt-1">¡La constancia en estos primeros 90 días construirá la base para todo Astrynn Holdings!</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const label = checkbox.nextElementSibling; // El label es el siguiente hermano del checkbox
+
+                // Cargar estado guardado
+                const savedState = localStorage.getItem(checkbox.id);
+                if (savedState === 'true') {
+                    checkbox.checked = true;
+                    checkbox.closest('.deliverable-item').classList.add('deliverable-completed');
+                    if (label) { // Asegurarse de que el label exista
+                        label.classList.add('line-through', 'text-gray-500');
+                    }
+                } else if (savedState === 'false')  {
+                     checkbox.checked = false;
+                     checkbox.closest('.deliverable-item').classList.remove('deliverable-completed');
+                     if (label) { // Asegurarse de que el label exista
+                        label.classList.remove('line-through', 'text-gray-500');
+                     }
+                }
+
+
+                checkbox.addEventListener('change', function() {
+                    const deliverableItem = this.closest('.deliverable-item');
+                    const currentLabel = this.nextElementSibling; // El label es el siguiente hermano
+                    if (this.checked) {
+                        deliverableItem.classList.add('deliverable-completed');
+                         if (currentLabel) {
+                            currentLabel.classList.add('line-through', 'text-gray-500');
+                        }
+                    } else {
+                        deliverableItem.classList.remove('deliverable-completed');
+                        if (currentLabel) {
+                            currentLabel.classList.remove('line-through', 'text-gray-500');
+                        }
+                    }
+                    localStorage.setItem(this.id, this.checked);
+                });
+            });
+
+            const textInputs = document.querySelectorAll('.notes-input');
+            textInputs.forEach(input => {
+                // Cargar notas guardadas
+                const savedNotes = localStorage.getItem(input.id);
+                if (savedNotes) {
+                    input.value = savedNotes;
+                }
+
+                input.addEventListener('input', function() {
+                    localStorage.setItem(this.id, this.value);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
