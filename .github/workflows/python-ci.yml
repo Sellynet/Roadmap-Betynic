@@ -9,6 +9,8 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src
 
     steps:
       - name: Checkout code
@@ -24,7 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements_template.txt
           pip install pytest
-      - name: Set PYTHONPATH to src
-        run: echo "PYTHONPATH=$PWD/src" >> $GITHUB_ENV
+
       - name: Run unit tests
         run: pytest -q
