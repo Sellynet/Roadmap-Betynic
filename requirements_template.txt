@@ -3,3 +3,5 @@ requests
 pytest
 black
 isort
+fastapi
+uvicorn
