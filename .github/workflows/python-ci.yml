@@ -10,7 +10,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     env:
-      PYTHONPATH: src
+      PYTHONPATH:${{github.workspace}}
 
     steps:
       - name: Checkout code
