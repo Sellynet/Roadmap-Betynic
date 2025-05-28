@@ -2,7 +2,7 @@ import pytest
 from math import isclose
 
 from src.betynic.utils import calc_liability
-from betynic.utils import calc_liability
+from src.betynic.utils import calc_liability
 
 
 def test_calc_liability_default():
