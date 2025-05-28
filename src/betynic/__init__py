@@ -1,1 +1,20 @@
+# tests/test_calc_liability.py
 
+import pytest
+from betynic.utils import calc_liability
+
+def test_calc_liability_default():
+    assert pytest.approx(calc_liability(100, 3.0), rel=1e-9) == 10.0
+
+def test_calc_liability_custom_commission():
+    assert pytest.approx(calc_liability(50, 4.0, commission_rate=0.1), rel=1e-9) == 15.0
+
+def test_calc_liability_with_adjustments():
+    expected = 75 * (2.5 - 1) * 0.07 * 1.2 * 1.01
+    assert pytest.approx(calc_liability(
+        stake=75,
+        lay_odds=2.5,
+        commission_rate=0.07,
+        volatility_adjustment=1.2,
+        daily_interest=1.01,
+    ), rel=1e-9) == expected
